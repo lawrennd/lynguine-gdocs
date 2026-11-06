@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+dist/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.venv-vibesafe/
+lynguine.log
+.DS_Store
+*.code-workspace~
+

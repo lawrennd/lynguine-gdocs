@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "lynguine-gdocs"
+version = "0.1.0"
+description = "Google Docs catalogue as a lynguine tabular IO type."
+authors = ["Neil D. Lawrence <lawrennd@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "lynguine_gdocs"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+lynguine = ">=0.1.2"
+pandas = "*"
+google-auth-oauthlib = {version = "*", optional = true}
+
+[tool.poetry.extras]
+oauth = ["google-auth-oauthlib"]
+
+[tool.poetry.scripts]
+lynguine-gdocs-login = "lynguine_gdocs.login:main"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+pytest-cov = "*"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=lynguine_gdocs --cov-report=term-missing --cov-fail-under=90"
+
+[tool.coverage.run]
+branch = true
+source = ["lynguine_gdocs"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+
+[tool.poetry.plugins."lynguine.io_types"]
+gdocs = "lynguine_gdocs:register"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

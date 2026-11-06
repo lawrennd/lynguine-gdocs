@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../lynguine"
+		},
+		{
+			"path": "../lynguine-maildir"
+		},
+		{
+			"path": "../lynguine-trello"
+		},
+		{
+			"path": "../offlineimap"
+		}
+	],
+	"settings": {}
+}
