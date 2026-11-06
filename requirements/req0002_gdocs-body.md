@@ -1,7 +1,7 @@
 ---
 id: "0002"
 title: "Google Docs body as a document reader"
-status: "Proposed"
+status: "Implemented"
 priority: "Medium"
 created: "2026-11-06"
 last_updated: "2026-11-06"
@@ -30,17 +30,23 @@ scopes in addition to Drive readonly.
 
 ## Acceptance Criteria
 
-- [ ] A Doc id yields document text (or units) without putting the full
+- [x] A Doc id yields document text (or units) without putting the full
       body on every catalogue row by default
-- [ ] Credentials stay in CIP-0005; secrets are not in YAML
-- [ ] CI tests do not call live Google APIs
+- [x] Credentials stay in CIP-0005; secrets are not in YAML
+- [x] CI tests do not call live Google APIs
 
 ## Notes
 
-Depends on REQ-0001 for auth bootstrap patterns. Implementation CIP TBD.
+Depends on REQ-0001 for auth bootstrap patterns. Implemented by
+[CIP-0002](../cip/cip0002.md). Registration of `reader: gdocs` inside
+lynguine `document_segment` is a follow-on core change.
 
 ## Progress Updates
 
 ### 2026-11-06
 
 Requirement Proposed. Catalogue (REQ-0001) ships first.
+
+### 2026-11-06
+
+CIP-0002 implements `read_gdoc` / `gdoc_segment`. Marked Implemented.

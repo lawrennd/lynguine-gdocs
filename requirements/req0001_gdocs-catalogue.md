@@ -76,4 +76,5 @@ use a builtin `type:`.
 
 Requirement created. CIP-0001 reader, mocked tests, login helper, and
 README landed. Status Implemented, awaiting a live Drive check before
-Validated. Doc body is [REQ-0002](./req0002_gdocs-body.md).
+Validated. Doc body is [REQ-0002](./req0002_gdocs-body.md)
+([CIP-0002](../cip/cip0002.md)).
